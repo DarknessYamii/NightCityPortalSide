@@ -6,12 +6,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ArticulosComponent } from './componentes/vistas/articulos/articulos.component';
 import { TiendaComponent } from './componentes/tienda/tienda.component';
 import { AppRoutingModule } from './app-routing.module';
+import { IndexComponent } from './componentes/index/index.component';
+import { HeaderComponent } from './componentes/vistas/header/header.component';
+import { FooterComponent } from './componentes/vistas/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticulosComponent,
-    TiendaComponent
+    TiendaComponent,
+    IndexComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
