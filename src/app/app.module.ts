@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { IndexComponent } from './componentes/index/index.component';
 import { HeaderComponent } from './componentes/vistas/header/header.component';
 import { FooterComponent } from './componentes/vistas/footer/footer.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FooterComponent } from './componentes/vistas/footer/footer.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    NgbModule,
  
   ],
   providers: [],
