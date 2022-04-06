@@ -9,6 +9,7 @@ import { IndexComponent } from './componentes/index/index.component';
 import { HeaderComponent } from './componentes/vistas/header/header.component';
 import { FooterComponent } from './componentes/vistas/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
+    FontAwesomeModule,
  
   ],
   providers: [],
