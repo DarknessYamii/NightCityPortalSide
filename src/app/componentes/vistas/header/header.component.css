@@ -1,5 +1,5 @@
 *{
-  font-size: 20px;
+  font-size: 40px;
   font-family: 'VT323', monospace;
   background-color: black;
 }
@@ -25,8 +25,8 @@ img{
   height:10px;
   width:90%;
   opacity:0;
-  background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
-  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+  background: -webkit-radial-gradient(center, ellipse);
+  background: radial-gradient(ellipse at center);
   /* W3C */
   transition-duration: 0.3s;
   transition-property: transform, opacity;
@@ -81,7 +81,7 @@ img{
 
 
 body {
-  background-color: rgba(0,0,0,1);
+  background-color: rgba(0,0,0,0);
   font-weight:600;
   text-align:center !important;
   color: white;
@@ -111,4 +111,35 @@ img{
   position:relative; 
   left: 1px;
   top: 1px;
+}
+.neonText {
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+}
+
+
+/* Flickering animation */
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #0fa,
+      0 0 60px #0fa,
+      0 0 70px #0fa,
+      0 0 90px #0fa,
+      0 0 120px #0fa;
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+
+.whiteColor {
+  color: white !important; 
 }
