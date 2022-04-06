@@ -11,6 +11,7 @@ import { FooterComponent } from './componentes/vistas/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+
 @NgModule({
   declarations: [
     AppComponent,
