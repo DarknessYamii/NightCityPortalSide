@@ -1,3 +1,9 @@
 *{
     background-color: black;
 }
+
+body {
+    background-image: url(../assets/img/artwork-city-building-street-Nike-signboard-1922791-wallhere.com.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   }
