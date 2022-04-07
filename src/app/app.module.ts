@@ -9,6 +9,9 @@ import { HeaderComponent } from './componentes/vistas/header/header.component';
 import { FooterComponent } from './componentes/vistas/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DescargaComponent } from './componentes/descarga/descarga.component';
+import { TopicosComponent } from './componentes/topicos/topicos.component';
+import { NewsComponent } from './componentes/news/news.component';
 
 
 @NgModule({
@@ -18,6 +21,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     IndexComponent,
     HeaderComponent,
     FooterComponent,
+    DescargaComponent,
+    TopicosComponent,
+    NewsComponent,
   ],
   imports: [
     BrowserModule,
