@@ -8,25 +8,28 @@
 
 <div class="bg-dark vh-100 justify-content-center align-items-center">
   <div class="row">
-    <div class="col-3 justify-content-around" *ngFor="let articulo of articulos">
+    <div
+      class="col-3 justify-content-around"
+      *ngFor="let articulo of articulos"
+    >
       <div class="card p-2">
         <div class="p-info px-3 py-3">
           <div>
-            <h5 class="mb-0">{{articulo.nombre}}</h5>
-            <span>{{articulo.nombre}}</span>
+            <h5 class="mb-0">{{ articulo.nombre }}</h5>
+            <span>{{ articulo.nombre }}</span>
           </div>
           <div class="p-price d-flex flex-row">
             <span>$</span>
-            <h1>{{articulo.precio}}</h1>
+            <h1>{{ articulo.precio }}</h1>
           </div>
           <div class="heart"><i class="bx bx-heart"></i></div>
         </div>
         <div class="text-center p-image">
-          <img src="{{articulo.url}}"/>
+          <img src="{{ articulo.url }}" />
         </div>
         <div class="p-about">
           <p>
-          {{articulo.descripcion}}
+            {{ articulo.descripcion }}
           </p>
         </div>
         <div class="buttons d-flex flex-row gap-3 px-3">

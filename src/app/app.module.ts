@@ -12,6 +12,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DescargaComponent } from './componentes/descarga/descarga.component';
 import { TopicosComponent } from './componentes/topicos/topicos.component';
 import { NewsComponent } from './componentes/news/news.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { RegistroComponent } from './componentes/registro/registro.component';
 
 
 @NgModule({
@@ -24,6 +26,8 @@ import { NewsComponent } from './componentes/news/news.component';
     DescargaComponent,
     TopicosComponent,
     NewsComponent,
+    LoginComponent,
+    RegistroComponent,
   ],
   imports: [
     BrowserModule,
