@@ -1,37 +1,40 @@
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  />
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 </head>
-<!--For Page-->
-<div class="page">
-    <!--For Row containing all card-->
-    <div class="row">
-        <!--Card 1-->
-        <div class="col-sm" *ngFor="let articulo of articulos">
-            <div class="card card-cascade card-ecommerce wider shadow mb-5">
-                <!--Card image-->
-                <div class="view view-cascade overlay text-center"> <img class="card-img-top" src="{{ articulo.url }}" alt=""> <a>
-                        <div class="mask rgba-white-slight"></div>
-                    </a> </div>
-                <!--Card Body-->
-                <div class="card-body card-body-cascade text-center">
-                    <!--Card Title-->
-                    <h4 class="card-title"><strong><a href="">{{ articulo.nombre }}</a></strong></h4> <!-- Card Description-->
-                    <p class="price">{{ articulo.precio }}</p> <!-- Card Rating-->
-                    <ul class="row rating">
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                    </ul>
-                    <!--Card footer-->
-                    <div class="card-footer">
-                        <p>Comprar</p>
-                    </div>
-                </div>
-            </div>
+
+<div class="bg-dark vh-100 justify-content-center align-items-center">
+  <div class="row">
+    <div class="col-3 justify-content-around" *ngFor="let articulo of articulos">
+      <div class="card p-2">
+        <div class="p-info px-3 py-3">
+          <div>
+            <h5 class="mb-0">{{articulo.nombre}}</h5>
+            <span>{{articulo.nombre}}</span>
+          </div>
+          <div class="p-price d-flex flex-row">
+            <span>$</span>
+            <h1>{{articulo.precio}}</h1>
+          </div>
+          <div class="heart"><i class="bx bx-heart"></i></div>
         </div>
+        <div class="text-center p-image">
+          <img src="{{articulo.url}}"/>
+        </div>
+        <div class="p-about">
+          <p>
+          {{articulo.descripcion}}
+          </p>
+        </div>
+        <div class="buttons d-flex flex-row gap-3 px-3">
+          <button class="btn btn-danger w-100">Ver</button>
+          <button class="btn btn-outline-danger w-100">Comprar ahora</button>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

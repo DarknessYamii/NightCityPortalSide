@@ -6,8 +6,7 @@ import { IndexComponent } from './componentes/index/index.component';
 import { HeaderComponent } from './componentes/vistas/header/header.component';
 
 const routes: Routes = [
-  { path: '', component: HeaderComponent, pathMatch: 'full' },
-  { path: 'home', component: IndexComponent },
+  { path: '', component: IndexComponent, pathMatch: 'full' },
   { path: 'shop', component: TiendaComponent }
   
 ];

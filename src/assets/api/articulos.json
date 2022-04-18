@@ -1,15 +1,17 @@
 [
     {
         "id": 1,
-        "url": "holi",
+        "url": "https://static.bandainamcoent.eu/high/sword-art-online/brand-setup/sao-brand-mobile-624x468.jpg",
         "nombre": "Prueba",
-        "precio": "12$"
+        "descripcion": "Hola buenas tardes","descripcion": "Hola buenas tardes",
+        "precio": "12"
     },
     {
         "id": 2,
-        "url": "pene",
+        "url": "https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABddWNPHBX5iJBtMkpKzNe8gWSv6RWERSmSWxtSDXOdJSv5jXblpHCMpfa1WJw9KxSFu_xjpB6jAnZDgWc3lpj3ACB2SW.jpg?r=af8",
         "nombre": "test",
-        "precio": "40$"
+        "descripcion": "Hola buenas tardes",
+        "precio": "40"
     }
    
 ] 
