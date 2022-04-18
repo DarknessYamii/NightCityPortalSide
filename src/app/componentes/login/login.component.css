@@ -116,3 +116,59 @@ a:hover {
 p {
     color: #0000ff
 }
+
+.neonLogin {
+    animation: flickerPurple 1.5s infinite alternate;
+    color: #fff;
+  }
+  
+  
+  /* Flickering animation */
+  @keyframes flickerPurple {
+      
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px rgb(212, 0, 255),
+        0 0 60px rgb(212, 0, 255),
+        0 0 70px rgb(212, 0, 255),
+        0 0 90px rgb(212, 0, 255),
+        0 0 120px rgb(212, 0, 255);
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+
+  .neon {
+    animation: flickerNeon 1.5s infinite alternate;
+    color: #fff;
+  }
+  
+  
+  /* Flickering animation */
+  @keyframes flickerNeon {
+      
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px rgb(241, 0, 221),
+        0 0 60px rgb(241, 0, 221),
+        0 0 70px rgb(241, 0, 221),
+        0 0 90px rgb(241, 0, 221),
+        0 0 120px rgb(241, 0, 221);
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
