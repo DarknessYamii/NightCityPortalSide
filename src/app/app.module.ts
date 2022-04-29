@@ -14,6 +14,7 @@ import { TopicosComponent } from './componentes/topicos/topicos.component';
 import { NewsComponent } from './componentes/news/news.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -28,10 +29,12 @@ import { RegistroComponent } from './componentes/registro/registro.component';
     NewsComponent,
     LoginComponent,
     RegistroComponent,
+    
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,

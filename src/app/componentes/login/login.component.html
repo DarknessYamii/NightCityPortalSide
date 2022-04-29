@@ -9,8 +9,9 @@
     <h3 class="neonLogin">Inicia Sesion</h3>
     <form method="post">
       <div class="inputBox">
-        <input id="uname" type="text" name="Username" placeholder="Usuario" />
+        <input [(ngModel)]="usuario.nombre" id="uname" type="text" name="Username" placeholder="Usuario" />
         <input
+        [(ngModel)]="usuario.password"
           id="pass"
           type="password"
           name="Password"
