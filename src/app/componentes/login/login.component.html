@@ -1,16 +1,36 @@
+
 <body>
-    <div class="loginBox">
-        <img class="user" src="https://pbs.twimg.com/profile_images/1237015630638972929/Gd_kqNfK_400x400.jpg" height="100px" width="100px" />
-        <h3 class="neonLogin">Inicia Sesion</h3>
-        <form method="post">
-            <div class="inputBox">
-                <input [(ngModel)]="usuario.nombre" id="uname" type="text" name="Username" placeholder="Usuario" />
-                <input [(ngModel)]="usuario.password" id="pass" type="password" name="Password" placeholder="Contraseña" />
-            </div>
-            <input type="submit" (click)="login()" name="" value="Iniciar Sesion" />
-        </form>
-        <div class="text-center">
-            <a routerLink="/registro" class="neon" style="color: #59238f">Registrarse</a>
-        </div>
+  <div class="loginBox">
+    <img
+      class="user"
+      src="https://pbs.twimg.com/profile_images/1237015630638972929/Gd_kqNfK_400x400.jpg"
+      height="100px"
+      width="100px"
+    />
+    <h3 class="neonLogin">Inicia Sesion</h3>
+    <form method="post">
+      <div class="inputBox">
+        <input
+          [(ngModel)]="usuario.nombre"
+          id="uname"
+          type="text"
+          name="Username"
+          placeholder="Usuario"
+        />
+        <input
+          [(ngModel)]="usuario.password"
+          id="pass"
+          type="password"
+          name="Password"
+          placeholder="Contraseña"
+        />
+      </div>
+       <input type="submit" (click)="login()" name="" value="Iniciar Sesion" />
+    </form>
+    <div class="text-center">
+      <a routerLink="/registro" class="neon" style="color: #59238f"
+        >Registrarse</a
+      >
     </div>
+  </div>
 </body>

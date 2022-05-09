@@ -13,8 +13,9 @@ import { DescargaComponent } from './componentes/descarga/descarga.component';
 import { TopicosComponent } from './componentes/topicos/topicos.component';
 import { NewsComponent } from './componentes/news/news.component';
 import { LoginComponent } from './componentes/login/login.component';
-import { RegistroComponent } from './componentes/registro/registro.component';
 import { FormsModule } from '@angular/forms';
+import { RegistroComponent } from './componentes/login/registro.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -34,10 +35,11 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     FormsModule,
     AppRoutingModule,
     NgbModule,
-    FontAwesomeModule,
+    FontAwesomeModule
  
   ],
   providers: [],
