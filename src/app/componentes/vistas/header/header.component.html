@@ -4,35 +4,63 @@
     type="text/css"
     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
   />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+    rel="stylesheet"
+  />
 </head>
 
-  <div class="container-fluid">
-    <img src="../../../../assets/img/YandC.png">
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-auto">
-        <ul
-          class="nav navbar-nav neonText"
-          style="display: inline; padding-left: 3px; padding-right: 3px"
-        >
-          <li><a class="hoverable whiteColor" routerLink="/">Inicio</a></li>
-          <li><a class="hoverable whiteColor" routerLink="/shop">Tienda</a></li>
-          <li><a class="hoverable whiteColor" routerLink="#">Topicos</a></li>
-          <li><a class="hoverable whiteColor" routerLink="#">Noticias</a></li>
-          <li><a class="hoverable whiteColor" routerLink="/login">Registro/Login</a></li>
-          <li><a class="hoverable whiteColor" routerLink="#">Descargas</a></li>
-        </ul>
-      </div>
+<div class="container-fluid">
+
+    <a *ngIf="authService.isAuthenticated()"
+      class="hoverable whiteColor"
+      href="#"
+      role="button"
+      id="dropdownMenuLink"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      {{ authService.usuario.nombre }}
+    </a>
+
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <button (click)="logout()" class="dropdown-item" type="submit">
+        Cerrar Sesion
+      </button>
+    </div>
+  <img src="../../../../assets/img/YandC.png" />
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-auto">
+          <ul
+            class="nav navbar-nav neonText"
+            style="display: inline; padding-left: 3px; padding-right: 3px"
+          >
+            <li><a class="hoverable whiteColor" routerLink="/">Inicio</a></li>
+            <li *ngIf="authService.hasRole('ROLE_ADMIN') || authService.hasRole('ROLE_USER')">
+              <a class="hoverable whiteColor" routerLink="/shop">Tienda</a>
+            </li>
+            <li><a class="hoverable whiteColor" routerLink="#">Topicos</a></li>
+            <li><a class="hoverable whiteColor" routerLink="#">Noticias</a></li>
+            <li>
+              <a routerLink="/login" class="hoverable whiteColor"
+                >Iniciar Sesion</a
+              >
+            </li>
+            <li>
+              <a class="hoverable whiteColor" routerLink="#">Descargas</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-    </nav>
-    
-  </div>
-  <script src="../../../../assets/js/header.js"></script>
-  <script
-    href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"
-  ></script>
+  </nav>
+</div>
+<script src="../../../../assets/js/header.js"></script>
+<script
+  href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+></script>

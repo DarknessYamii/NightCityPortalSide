@@ -28,9 +28,9 @@ export class AuthService {
       return this._token;
     }else if(this._token == null && sessionStorage.getItem('token') != null ){
      this._token =  JSON.parse(sessionStorage.getItem('token')  || "[]");
-     return this._token  || "[]";
+     return this._token!;
     }
-    return null  || "[]";
+    return null!;
   }
 
 
@@ -75,4 +75,28 @@ export class AuthService {
     }
     return null;
   }
+
+  isAuthenticated(): boolean {
+    let payload = this.obtenerDatosToken(this.token);
+    if (payload != null && payload.user_name && payload.user_name.length > 0) {
+      return true;
+    }
+    return false;
+  }
+
+  hasRole(role: string): boolean {
+    if (this.usuario.roles.includes(role)) {
+      return true;
+    }
+    return false;
+  }
+
+  logout(): void {
+    this._token = null || undefined;
+    this._usuario = null || undefined;
+    sessionStorage.clear();
+    sessionStorage.removeItem('token');
+    sessionStorage.removeItem('usuario');
+  }
+
 }
