@@ -9,18 +9,15 @@
     <h3 class="neonRegistro">Registro</h3>
     <form method="post">
       <div class="inputBox">
-        <input id="uname" type="text" name="Username" placeholder="Usuario" />
-        <input
-          id="pass"
-          type="password"
-          name="Password"
-          placeholder="Contraseña"
-        />
+        <input   [(ngModel)]="usuario.username" id="uname" type="text" name="Username" placeholder="Usuario" />
+        <input   [(ngModel)]="usuario.apellido"id="uname" type="text" name="Apellido" placeholder="Apellido" />
+        <input   [(ngModel)]="usuario.password"id="uname" type="text" name="Password" placeholder="Password" />
+        <input [(ngModel)]="usuario.email" id="uname" type="text" name="Email" placeholder="Email" />
       </div>
-      <input type="submit" name="" value="Registrarse" />
+      <input type="submit" name="" (click)='create()' value="Registrarse" />
     </form>
     <div class="text-center">
-      <a routerLink="/login" class="neon" style="color: #59238f">Iniciar Sesion</a>
+      <a [routerLink]="'/login'" class="neon" style="color: #59238f">Iniciar Sesion</a>
     </div>
   </div>
 </body>

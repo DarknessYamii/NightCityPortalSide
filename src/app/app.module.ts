@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TiendaComponent } from './componentes/tienda/tienda.component';
 import { AppRoutingModule } from './app-routing.module';
 import { IndexComponent } from './componentes/index/index.component';
 import { HeaderComponent } from './componentes/vistas/header/header.component';
 import { FooterComponent } from './componentes/vistas/footer/footer.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DescargaComponent } from './componentes/descarga/descarga.component';
 import { TopicosComponent } from './componentes/topicos/topicos.component';
@@ -16,6 +14,7 @@ import { LoginComponent } from './componentes/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { RegistroComponent } from './componentes/login/registro.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UsuarioService } from './componentes/login/usuario.service';
 
 
 @NgModule({
@@ -34,15 +33,13 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    NgbModule,
     FontAwesomeModule
  
   ],
-  providers: [],
+  providers: [UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

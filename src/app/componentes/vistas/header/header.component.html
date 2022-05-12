@@ -23,7 +23,7 @@
       aria-haspopup="true"
       aria-expanded="false"
     >
-      {{ authService.usuario.nombre }}
+      {{ authService.usuario.username }}
     </a>
 
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -41,12 +41,12 @@
             style="display: inline; padding-left: 3px; padding-right: 3px"
           >
             <li><a class="hoverable whiteColor" routerLink="/">Inicio</a></li>
-            <li *ngIf="authService.hasRole('ROLE_ADMIN') || authService.hasRole('ROLE_USER')">
+       <li *ngIf="authService.hasRole('ROLE_USER') || authService.hasRole('ROLE_ADMIN') ">
               <a class="hoverable whiteColor" routerLink="/shop">Tienda</a>
-            </li>
+            </li>   
             <li><a class="hoverable whiteColor" routerLink="#">Topicos</a></li>
             <li><a class="hoverable whiteColor" routerLink="#">Noticias</a></li>
-            <li>
+            <li  >
               <a routerLink="/login" class="hoverable whiteColor"
                 >Iniciar Sesion</a
               >

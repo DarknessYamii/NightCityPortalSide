@@ -27,7 +27,7 @@ export class AuthService {
     if(this._token != null){
       return this._token;
     }else if(this._token == null && sessionStorage.getItem('token') != null ){
-     this._token =  JSON.parse(sessionStorage.getItem('token')  || "[]");
+     this._token =  JSON.parse(sessionStorage.getItem('token') || "[]");
      return this._token!;
     }
     return null!;
@@ -46,7 +46,7 @@ export class AuthService {
 
     let params = new URLSearchParams();
     params.set('grant_type', 'password');
-    params.set('username', usuario.nombre);
+    params.set('username', usuario.username);
     params.set('password', usuario.password);
     console.log(params.toString());
     return this.http.post<any>(urlEndpoint, params.toString(), { headers: httpHeaders });
@@ -55,11 +55,11 @@ export class AuthService {
   guardarUsuario(accessToken: string): void{
     let payload = this.obtenerDatosToken(accessToken);
     this._usuario = new Usuario();
-    this._usuario.nombre = payload.nombre;
+    this._usuario.username = payload.user_name;
     this._usuario.apellido = payload.apellido;
     this._usuario.email = payload.email;
-    this._usuario.url = payload.url;
     this._usuario.roles = payload.authorities;
+    console.log(payload);
 
     sessionStorage.setItem('usuario', JSON.stringify(this._usuario));
 
