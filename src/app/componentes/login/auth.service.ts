@@ -78,6 +78,7 @@ export class AuthService {
 
   isAuthenticated(): boolean {
     let payload = this.obtenerDatosToken(this.token);
+    console.log(payload)
     if (payload != null && payload.user_name && payload.user_name.length > 0) {
       return true;
     }
