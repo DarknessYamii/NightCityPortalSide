@@ -1,0 +1,85 @@
+.body{
+    background-color: black;
+    text-align: center;
+    width: 100%;
+}
+
+*{
+    
+    font-family: 'VT323', monospace;
+    background-color: black;
+  }
+
+  .tam1{
+    font-size: 100px;
+  }
+
+  .tam2{
+    font-size: 60px;
+  }
+  
+  .blanco{
+    color: #fff;
+  }
+
+
+
+  .neonText {
+    
+    color: #fff;
+    text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 60px #0fa,
+        0 0 70px #0fa,
+        0 0 90px #0fa,
+        0 0 120px #0fa;
+  }
+
+  .neonRojo {
+    
+    color: #fff;
+    text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px rgb(255, 66, 66),
+        0 0 60px rgb(255, 66, 66),
+        0 0 70px rgb(255, 66, 66),
+        0 0 90px rgb(255, 66, 66),
+        0 0 120px rgb(255, 66, 66);
+  }
+
+  .neonText1 {
+    
+    color: #fff;
+    text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px rgb(206, 99, 233),
+        0 0 60px rgb(206, 99, 233),
+        0 0 70px rgb(206, 99, 233),
+        0 0 90px rgb(206, 99, 233),
+        0 0 120px rgb(206, 99, 233);
+  }
+
+
+  .neonNegro {
+    
+    color: rgb(0, 0, 0);
+    text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px rgb(255, 255, 255),
+        0 0 60px rgb(255, 255, 255),
+        0 0 70px rgb(255, 255, 255),
+        0 0 90px rgb(255, 255, 255),
+        0 0 120px rgb(255, 255, 255);
+  }
+  
+  
+ 

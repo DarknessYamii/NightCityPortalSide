@@ -6,6 +6,7 @@ import { IndexComponent } from './componentes/index/index.component';
 import { HeaderComponent } from './componentes/vistas/header/header.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { RegistroComponent } from './componentes/login/registro.component';
+import { DescargaComponent } from './componentes/descarga/descarga.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'shop', component: TiendaComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
+  { path: 'descarga', component: DescargaComponent},
   
 ];
 

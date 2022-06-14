@@ -1,0 +1,292 @@
+.opacidad1{
+    background-color: rgba(26, 146, 226, 0.25);
+    background-image: url(../../../assets/img/artwork-city-building-street-Nike-signboard-1922791-wallhere.com.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.fondoletra{
+    background-color: rgb(0, 111, 159);
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.letrasAlt{
+    color: white;
+}
+
+.titulonoticia{
+    font-size: 35px;
+}
+
+.cuerponot{
+font-size: 25px;
+}
+
+.imagennot{
+    width: 310px;
+    height: 190px;
+}
+
+.letra1{
+    color: white;
+    font-size: 30px;
+
+}
+
+.letra2{
+    color: white;
+    font-size: 30px;
+}
+
+.opacidad2{
+    background-color: rgba(95, 18, 110, 0.85); 
+    
+}
+
+.opacidad3{
+    background-color: rgb(0, 111, 159);
+}
+
+.opacidad4{
+    background-color: rgb(29, 1, 143);
+}
+
+.divtocho{
+    background-color: red;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 5px;
+}
+
+.margin{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.centrar{
+    text-align: center;
+}
+
+.div100{
+    
+    width: 100%;
+    display: flex; justify-content: center; 
+    
+}
+
+.div501{
+    
+    width: 50%;
+    
+    
+}
+.div502{
+    background-color: rgb(29, 1, 143);
+    width: 50%;
+    
+    
+}
+
+.no-padding {
+    padding: 0;
+  }
+
+/*Animacion*/
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background-color:#363a70;
+}
+.card{
+    height:500px;
+    width:100%;
+    background-color:rgb(29, 1, 143);
+    border-radius:25px;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    transition:all 0.5s;
+}
+.content h2 {
+   display:flex;
+   align-items:center;
+   margin-top:35px;
+   margin-left:30px;
+   font-size:40px;
+   font-weight:600;
+   color:#fff;
+}      
+
+.content h4 {
+    display:flex;
+    align-items:center;
+    margin-top:35px;
+    margin-left:30px;
+    font-size:30px;
+    font-weight:600;
+    color:#fff;
+ }   
+
+
+.buttons{
+    margin-left:30px;
+    height:40px;
+    width:130px;
+    border-radius:20px;
+    background-color:#FF1744;
+    color:#fff;
+    font-size:15px;
+    font-weight:bold;
+    border:none;
+}
+
+.buttons1{
+    margin-left:30px;
+    height:40px;
+    width:130px;
+    border-radius:20px;
+    background-color:rgb(29, 1, 143);
+    color:#fff;
+    font-size:15px;
+    font-weight:bold;
+    border:none;
+}
+
+.buttons2{
+    margin-left:30px;
+    height:40px;
+    width:130px;
+    border-radius:20px;
+    background-color:rgb(0, 111, 159);
+    color: rgb(51, 51, 51);
+    font-size:15px;
+    font-weight:bold;
+    border:none;
+}
+
+.card::before {
+    content: 'Redes sociales abajo!!';
+    position: absolute;
+    background-color:rgba(26, 146, 226, 0.25);
+    height: 280px;
+    width: 280px;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight:bold;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color: #fff;
+    bottom: -500px;
+    right: 20px;
+    cursor:pointer;
+    /*transition:all 0.5s;*/
+}
+
+.card:hover::before{
+    animation:innercircle 1s both;
+}
+
+@keyframes innercircle{
+    0%{
+        bottom:-500px;
+    }
+    
+    100%{
+        
+        bottom:20px;
+    }
+    
+}
+
+/*Animacion 2*/
+
+.a{
+	text-decoration: none;
+	display: inline-block;
+	position: relative;
+	padding: 20px 40px;
+	text-transform: uppercase;
+	color: rgb(111, 29, 110);
+	background: rgb(0, 111, 159);
+	font-size: 16px;
+	margin: 20px;
+	letter-spacing: 0.7em;
+	border-radius: 2px;
+}
+.a p{
+	position: absolute;
+	display: block;
+	background: rgb(29, 1, 143);
+}
+.a p:nth-child(1){
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s;
+}
+.a:hover p:nth-child(1){
+	transform: scaleX(1);
+	transform-origin: left;
+	transition: transform 0.25s;
+}
+
+.a p:nth-child(2){
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.25s;
+}
+.a:hover p:nth-child(2){
+	transform: scaleY(1);
+	transform-origin: bottom;
+	transition: transform 0.25s;
+	transition-delay: 0.25s;
+}
+
+.a p:nth-child(3){
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s;
+}
+.a:hover p:nth-child(3){
+	transform: scaleX(1);
+	transform-origin: right;
+	transition: transform 0.25s;
+	transition-delay: 0.35s;
+}
+
+.a p:nth-child(4){
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+.a:hover p:nth-child(4){
+	transform: scaleY(1);
+	transform-origin: top;
+	transition: transform 0.25s;
+	transition-delay: 0.45s;
+}
+.a:hover{
+	transition: 0.5s;
+	transition-delay: 1s;
+	background: rgb(29, 1, 143);
+}
