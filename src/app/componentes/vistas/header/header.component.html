@@ -40,7 +40,7 @@
             class="nav navbar-nav neonText"
             style="display: inline; padding-left: 3px; padding-right: 3px"
           >
-            <li><a class="hoverable whiteColor" routerLink="/">Inicio</a></li>
+            <li><a class="hoverable whiteColor" routerLink="/index">Inicio</a></li>
        <li *ngIf="authService.hasRole('ROLE_USER') || authService.hasRole('ROLE_ADMIN') ">
               <a class="hoverable whiteColor" routerLink="/shop">Tienda</a>
             </li>   
