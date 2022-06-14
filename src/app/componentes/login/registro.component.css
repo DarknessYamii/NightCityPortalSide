@@ -33,7 +33,8 @@ body {
     background: #000000;
     border-radius: 10px;
     padding: 40px;
-    box-sizing: border-box
+    box-sizing: border-box;
+    margin-top: 100px;
 }
 
 .user {
@@ -55,7 +56,8 @@ h3 {
 }
 
 .loginBox input[type="text"],
-.loginBox input[type="password"] {
+.loginBox input[type="password"]
+.loginBox input[type="email"] {
     border: none;
     border-bottom: 2px solid #262626;
     outline: none;
@@ -68,14 +70,16 @@ h3 {
 }
 
 .loginBox input[type="text"]:hover,
-.loginBox input[type="password"]:hover {
+.loginBox input[type="password"]:hover
+.loginBox input[type="email"]:hover {
     color: #42F3FA;
     border: 1px solid #42F3FA;
     box-shadow: 0 0 5px rgba(0, 255, 0, .3), 0 0 10px rgba(0, 255, 0, .2), 0 0 15px rgba(0, 255, 0, .1), 0 2px 0 black
 }
 
 .loginBox input[type="text"]:focus,
-.loginBox input[type="password"]:focus {
+.loginBox input[type="password"]:focus
+.loginBox input[type="email"]:focus {
     border-bottom: 2px solid #42F3FA
 }
 

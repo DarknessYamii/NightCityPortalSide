@@ -45,25 +45,37 @@ export class UsuarioService {
   create(usuario: Usuario): Observable<Usuario> {
     console.log(usuario)
     return this.http.post(this.urlEndPointRegister, usuario, { headers: this.httpHeaders }).pipe(
-      map( (response: any) => response.usuario as Usuario,
-      Swal.fire({
-        title: '<strong>Registro exitoso</strong>',
-        icon: 'success',
-        html:
-          `Bienvenido ${usuario.username}, has sido registrado exitosamente`,
-        showCloseButton: false,
-        showCancelButton: false,
-        focusConfirm: false,
-        confirmButtonText:
-          '<i class="fa fa-thumbs-up"></i> Perfecto!',
-        preConfirm: () => {
-          this.router.navigate(['/login'])
-          },
-      })
-      ),
+      map((response: any) => response.usuario as Usuario),
+      catchError(e => {
+        if(e.status == 500  ){
+          Swal.fire('Error', 'El usuario ya esta existe', 'error');
+        }else{
+          Swal.fire({
+            title: '<strong>Registro exitoso</strong>',
+            icon: 'success',
+            html:
+              `Bienvenido ${usuario.username}, has sido registrado exitosamente`,
+            showCloseButton: false,
+            showCancelButton: false,
+            focusConfirm: false,
+            confirmButtonText:
+              '<i class="fa fa-thumbs-up"></i> Perfecto!',
+            preConfirm: () => {
+              this.router.navigate(['/login'])
+              },
+          })
+        }
+        return throwError(e);
+      }
       
+      )
     );
-    
+        
+       
+        
+        
+         
   }
+
 
 }

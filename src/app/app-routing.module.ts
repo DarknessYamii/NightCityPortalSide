@@ -10,7 +10,7 @@ import { DescargaComponent } from './componentes/descarga/descarga.component';
 
 
 const routes: Routes = [
-  { path: '', component: IndexComponent, pathMatch: 'full' },
+  { path: 'index', component: IndexComponent, pathMatch: 'full' },
   { path: 'shop', component: TiendaComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },

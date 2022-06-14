@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
       this.authService.guardarToken(response.access_token);
       let usuario = this.authService.usuario;
       console.log(response);
-      this.router.navigate(['/shop']);
+      this.router.navigate(['/index']);
       Swal.fire('Login', `Hola ${usuario.username}, has iniciado sesion con exito!`, 'success');
     },err =>{
       if(err.status == 400){

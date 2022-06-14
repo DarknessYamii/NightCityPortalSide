@@ -7,14 +7,30 @@
       width="100px"
     />
     <h3 class="neonRegistro">Registro</h3>
-    <form method="post">
-      <div class="inputBox">
-        <input   [(ngModel)]="usuario.username" id="uname" type="text" name="Username" placeholder="Usuario" />
-        <input   [(ngModel)]="usuario.apellido"id="uname" type="text" name="Apellido" placeholder="Apellido" />
-        <input   [(ngModel)]="usuario.password"id="uname" type="text" name="Password" placeholder="Password" />
-        <input [(ngModel)]="usuario.email" id="uname" type="text" name="Email" placeholder="Email" />
+    <form [formGroup]="form" >
+      <div class="inputBox " >
+         <div class="form-group" [ngClass]="displayFieldCss('username')">
+          <input type="text" id="username" class="form-control mb-4" formControlName="username" placeholder="Usuario"> 
+          <app-field-error-display errorMsg="Nombre de usuario incorrecto" [displayError]="isFieldValid('username')" >
+          </app-field-error-display>
       </div>
-      <input type="submit" name="" (click)='create()' value="Registrarse" />
+      <div class="form-group" [ngClass]="displayFieldCss('apellido')">
+        <input type="text" id="apellido" class="form-control mb-4" formControlName="apellido" placeholder="Apellido"> 
+        <app-field-error-display errorMsg="Apellido incorrecto" [displayError]="isFieldValid('apellido')" >
+        </app-field-error-display>
+    </div>
+      <div class="form-group" [ngClass]="displayFieldCss('password')">
+        <input type="text" id="password" class="form-control mb-4" formControlName="password" placeholder="Contraseña"> 
+        <app-field-error-display errorMsg="Contraseña incorrecta"[displayError]="isFieldValid('password')" >
+        </app-field-error-display>
+    </div>
+  <div class="form-group" [ngClass]="displayFieldCss('email')">
+    <input type="text" id="email" class="form-control mb-4" formControlName="email" placeholder="Email"> 
+    <app-field-error-display errorMsg="Email debe tener formato válido" [displayError]="isFieldValid('email')" >
+    </app-field-error-display>
+</div>
+      </div>
+      <input type="submit" name="" (click)='create($event)' value="Registrarse" />
     </form>
     <div class="text-center">
       <a [routerLink]="'/login'" class="neon" style="color: #59238f">Iniciar Sesion</a>
