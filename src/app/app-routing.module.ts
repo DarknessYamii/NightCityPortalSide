@@ -7,6 +7,7 @@ import { HeaderComponent } from './componentes/vistas/header/header.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { RegistroComponent } from './componentes/login/registro.component';
 import { DescargaComponent } from './componentes/descarga/descarga.component';
+import { NewsComponent } from './componentes/news/news.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
   { path: 'descarga', component: DescargaComponent},
+  { path: 'news', component: NewsComponent},
+  { path: '', redirectTo: '/index', pathMatch: 'full' },
   
 ];
 

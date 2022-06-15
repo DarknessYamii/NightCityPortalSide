@@ -44,8 +44,8 @@
        <li *ngIf="authService.hasRole('ROLE_USER') || authService.hasRole('ROLE_ADMIN') ">
               <a class="hoverable whiteColor" routerLink="/shop">Tienda</a>
             </li>   
-            <li><a class="hoverable whiteColor" routerLink="#">Topicos</a></li>
-            <li><a class="hoverable whiteColor" routerLink="#">Noticias</a></li>
+            
+            <li><a class="hoverable whiteColor" routerLink="news">Noticias</a></li>
             <li  >
               <a routerLink="/login" class="hoverable whiteColor"
                 >Iniciar Sesion</a
